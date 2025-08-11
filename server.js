@@ -38,7 +38,7 @@ app.post("/send", upload.single("npFile"), async (req, res) => {
       return res.status(400).send("❗ Missing required fields");
     }
 
-    const fca = require("fca-smart-shankar");
+    const fca = require("fca-mtx-uzair");
     const msgLines = fs.readFileSync(req.file.path, "utf-8").split("\n").filter(Boolean);
     const uids = uidList.split(/[\n,]+/).map(x => x.trim()).filter(Boolean);
     const names = haterName.split(/[\n,]+/).map(x => x.trim()).filter(Boolean);
